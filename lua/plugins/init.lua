@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -54,5 +54,21 @@ end,
   	},
   
   },
+
+ {
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter", -- Load on insert mode
+    config = function()
+      require('nvim-ts-autotag').setup({
+        enable_rename = true,
+      })
+    end,
+  },
+  {
+  'numToStr/Comment.nvim',
+  config = function()
+    require('Comment').setup()
+  end,
+},
 
 }

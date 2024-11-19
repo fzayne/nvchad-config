@@ -10,3 +10,4 @@ vim.filetype.add({
     ['.*%.blade%.php'] = 'blade',
   },
 })
+

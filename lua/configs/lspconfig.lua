@@ -15,6 +15,11 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+
+lspconfig.html.setup{
+  filetypes= {"blade","html"}
+}
+
 -- typescript
 lspconfig.tsserver.setup {
   on_attach = on_attach,
